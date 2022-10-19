@@ -2,7 +2,7 @@
 
 > Darkmode with tailwind
 
-## Build Setup
+### Build Setup
 
 ```bash
 # install dependencies
@@ -21,22 +21,6 @@ $ npm run generate
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
 
-
-# Nuxt2 bridge Template
-see doc[Nuxt2 bridge](https://v3.nuxtjs.org/bridge/overview/)
-
-### install dependencies
-yarn # Or npm install
-
-### serve with hot reload at localhost:3000
-yarn dev
-
-### build for production and launch server
-yarn build
-yarn start
-
-### generate static project
-$ yarn generate
 
 ### Use Plugins
 - [@nuxt/i18n](https://i18n.nuxtjs.org/)
