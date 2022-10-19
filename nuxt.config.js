@@ -1,6 +1,7 @@
-import { i18nConfig } from './plugins/i18n';
+import { i18nConfig } from './src/plugins/i18n';
 
 export default {
+  srcDir: 'src',
   mode: 'universal',
   head: {
     title: 'Nuxt2 App',
