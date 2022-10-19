@@ -49,8 +49,7 @@ export default {
           <div class="d-block">
             <img
               src="~/assets/images/maju.jpeg"
-              class="object-cover rounded-md"
-              width="45px"
+              class="object-cover rounded-md w-[36px] w-xl-[45px]"
             >
           </div>
         </NuxtLink>

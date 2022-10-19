@@ -8,6 +8,10 @@
   .flex-center {
     @apply flex items-center justify-center
   }
+
+  .title {
+    @apply text-[30px] py-10 font-bold underline underline-offset-8 decoration-pink-500
+  }
 };
 
 @layer base {

@@ -2,7 +2,7 @@
   "name": "darkmode",
   "version": "1.0.0",
   "description": "Nuxt2 Darkmode with tailwind",
-  "author": "Fayaz",
+  "author": "Lindy",
   "private": true,
   "scripts": {
     "dev": "nuxt",

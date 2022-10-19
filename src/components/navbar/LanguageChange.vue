@@ -40,7 +40,7 @@ export default {
 
       <div
         v-show="showLangMenu"
-        class="lang-droupdown__menu w-4/5">
+        class="lang-droupdown__menu w-4/5 z-20">
         <nuxt-link
           v-for="(locale, i) in $i18n.locales"
           :key="`${locale.code}-${i}`"

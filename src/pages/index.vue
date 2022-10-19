@@ -1,7 +1,7 @@
 <template>
-  <div class="align-center">
-    <h1 class="title text-2xl">{{ $t('home') }}</h1>
-    <p>{{ appStore.test }}</p>
+  <div class="w-full mx-auto text-center align-center">
+    <h1 class="title">{{ $t('home') }}</h1>
+    <p>from app store message: {{ appStore.test }}</p>
   </div>
 </template>
 

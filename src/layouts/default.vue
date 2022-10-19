@@ -24,14 +24,16 @@ export default {
       w-11/12
       xl:w-4/5
       mx-auto
+      text-xl-lg
     ">
       <Nuxt />
     </main>
     <footer class="
       bg-red-500
       flex-center
+      text-2xl
+      text-white
       dark:bg-gray-900
-      dark:text-white
     ">
       footer
     </footer>
@@ -44,10 +46,10 @@ export default {
     padding: 10px 0;
   }
   header, footer {
-    height: 6vh;
+    height: 6.2vh;
   }
   footer {
-    height: 100px;
+    height: 60px;
     flex-shrink: 0;
   }
 </style>
