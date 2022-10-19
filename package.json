@@ -1,0 +1,29 @@
+{
+  "name": "darkmode",
+  "version": "1.0.0",
+  "description": "Nuxt2 Darkmode with tailwind",
+  "author": "Fayaz",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/composition-api": "^0.33.1",
+    "@nuxtjs/style-resources": "^1.2.1",
+    "@pinia/nuxt": "0.2.1",
+    "maju-ui": "^1.2.0",
+    "nuxt": "^2.0.0",
+    "pinia": "^2.0.23",
+    "sass": "^1.55.0",
+    "sass-loader": "10.1.1"
+  },
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^1.0.0",
+    "@nuxtjs/i18n": "^7.3.0",
+    "@nuxtjs/tailwindcss": "^5.3.5"
+  }
+}

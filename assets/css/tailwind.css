@@ -1,0 +1,18 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+};
+
+@layer base {
+  .default-layout {
+    @apply w-screen h-screen flex flex-col
+  }
+};
+
