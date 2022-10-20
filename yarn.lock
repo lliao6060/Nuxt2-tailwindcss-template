@@ -7583,6 +7583,11 @@ relateurl@^0.2.7:
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==
 
+remockjs@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/remockjs/-/remockjs-0.1.0.tgz#bd6ea35cbf44908e8a43c95fe2526fc958ceb0ae"
+  integrity sha512-W4zvVYdcaFKATJhHxlQweeoAuY5GskOKLiC2g3oxHYvZxI6GlMaX2Ko7/2EHwKv6zTpMuuC0BhYx0LWYRVZ2gw==
+
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"

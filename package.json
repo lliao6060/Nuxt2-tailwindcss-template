@@ -18,14 +18,15 @@
     "maju-ui": "^1.2.0",
     "nuxt": "^2.14.5",
     "pinia": "^2.0.23",
+    "remockjs": "^0.1.0",
     "sass": "^1.55.0",
     "sass-loader": "10.1.1"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^1.0.0",
     "@nuxtjs/i18n": "^7.3.0",
-    "@nuxtjs/tailwindcss": "^5.3.5",
     "@nuxtjs/proxy": "^2.0.1",
+    "@nuxtjs/tailwindcss": "^5.3.5",
     "unplugin-auto-import": "^0.11.2"
   }
 }

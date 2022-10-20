@@ -61,7 +61,8 @@ export default {
   },
   plugins: [
     '~/plugins/axios.js',
-    { src: '~/plugins/i18n.js' }
+    '~/plugins/i18n.js',
+    { src: '~/plugins/remock.js', mode: 'client'},
   ],
   // auto import global component: https://github.com/nuxt/components
   components: true,

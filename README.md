@@ -34,6 +34,7 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://ww
       style="color: #ba3329; font-size: 48px"
     ></iconify-icon>
   ```
+- [remock.js](https://www.npmjs.com/package/remockjs)
 
 ### 參考模板
 - [nuxt-i18n-example](https://github.com/paulgv/nuxt-i18n-example)
