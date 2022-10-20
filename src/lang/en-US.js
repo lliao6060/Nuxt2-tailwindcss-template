@@ -1,10 +1,7 @@
 export default {
   home: 'nuxt2-i18n-pinia-template',
-  about: 'About us',
-  homepage: {
-    subtitle: 'nuxt-i18n demo'
-  },
   aboutpage: {
+    title: 'About us',
     subtitle: 'Hi from {0}',
     content: `
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -14,5 +11,8 @@ export default {
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     `,
-  }
+  },
+  apipage: {
+    title: 'axios Demo',
+  },
 }

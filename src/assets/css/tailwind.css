@@ -16,7 +16,7 @@
 
 @layer base {
   .default-layout {
-    @apply w-screen h-screen flex flex-col
+    @apply w-screen min-h-screen flex flex-col
   }
 };
 

@@ -33,7 +33,21 @@ export default {
           cursor-pointer
         "
       >
-        {{ $t('about') }}
+        {{ $t('aboutpage.title') }}
+      </nuxt-link>
+    </li>
+    <li class="md:text-lg cursor-pointer">
+      <nuxt-link
+        :to="localePath('axios')"
+        class="
+          md:p-4
+          py-2
+          block
+          hover:opacity-75
+          cursor-pointer
+        "
+      >
+        {{ $t('apipage.title') }}
       </nuxt-link>
     </li>
   </ul>

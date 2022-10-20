@@ -1,11 +1,4 @@
-<script>
-import Navbar from '@/components/navbar'
-export default {
-  name: 'defaultLayout',
-  components: {
-    Navbar,
-  },
-};
+<script setup>
 </script>
 
 <template>
