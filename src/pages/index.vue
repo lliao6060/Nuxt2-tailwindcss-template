@@ -1,19 +1,41 @@
-<script setup>
+<script>
+import { defineComponent, useMeta } from '@nuxtjs/composition-api'
 import { useAppStore } from '@/store/app'
 
-const appStore = useAppStore()
-const count = ref(0)
+export default defineComponent({
+  head: {},
+  setup() {
+    const title = ref('index page')
+    useMeta(() => (
+      {
+        title: title.value,
+      //   hid: 'description',
+      //   name: 'description',
+      //   content: envConfig.env.DESCRIPTION
+      }
+    ))
 
-const increaseCount = () => {
-  count.value++
-}
+    const count = ref(0)
+    const appStore = useAppStore()
 
-const minusCount = () => {
-  count.value--
-}
+    const increaseCount = () => {
+      count.value++
+    }
+
+    const minusCount = () => {
+      count.value--
+    }
+
+    return {
+      count,
+      appStore,
+
+      increaseCount,
+      minusCount
+    }
+  },
+})
 </script>
-
-
 
 <template>
   <div class="w-full mx-auto text-center align-center">

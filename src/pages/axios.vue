@@ -1,42 +1,61 @@
-<script setup>
+<script>
+import { defineComponent, useMeta } from '@nuxtjs/composition-api'
 import { mockUserList } from '~/plugins/remock'
-import Skeleton from '../components/skeleton.vue'
-const { proxy } = getCurrentInstance()
-const userList = ref([])
-const loading = ref(false)
+import useApis from '~/composables/useApis'
 
-const getApi = async () => {
-  loading.value = true
-  const res = await mockUserList()
-  if(res) {
-    console.log(res)
-    userList.value = res.list
-    loading.value = false
-  }
+export default defineComponent({
+  head: {},
+  setup() {
+    const title = ref('axios demo page')
+    useMeta(() => (
+      {
+        title: title.value,
+        hid: 'description',
+        name: 'description',
+        content: 'axios demo page description'
+      }
+    ))
 
-  // console.log(mockData)
-  // const res = await proxy.$api.$get('user.json');
-  // if(res) {
-  //   console.log(res)
-  //   apiData.value = res
-  // }
-}
+    const { useMockApi, useApi } = useApis()
 
-onMounted(async () => {
-  await getApi()
+    const userList = ref([])
+    const loading = ref(false)
+
+    const getUserList = async () => {
+      loading.value = true
+      const res = await useMockApi(mockUserList())
+      if(res) {
+        userList.value = res.list
+        loading.value = false
+      }
+    }
+
+    const getApi = async () => {
+      const res = await useApi('https://jsonplaceholder.typicode.com/users', 'get')
+      console.log(res)
+    }
+
+    onMounted(async () => {
+      const apis = [getUserList(), getApi()]
+      await Promise.all(apis)
+    })
+
+    return {
+      loading,
+      userList
+    }
+  },
 })
-
 </script>
-
-
 
 <template>
   <div class="w-full mx-auto">
     <h1 class="title text-center">{{ $t('apipage.title') }}</h1>
     <div class="relative rounded-xl overflow-auto p-8">
-      <template v-if="loading">
-        <Skeleton />
-      </template>
+      <Skeleton
+        v-if="loading"
+        :item-num="5"
+      />
       <div
         v-else
         class="
@@ -46,8 +65,6 @@ onMounted(async () => {
         max-w-sm
         mx-auto
         bg-white
-        dark:bg-slate-800
-        dark:highlight-white/5
         shadow-lg
         ring-1
         ring-black/5
@@ -58,6 +75,8 @@ onMounted(async () => {
         scrollbar
         vertical
         dark:divide-slate-200/5
+        dark:bg-slate-800
+        dark:highlight-white/5
       ">
         <div
           v-for="(user, i) in userList"

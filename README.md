@@ -21,6 +21,14 @@ $ npm run generate
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://www.nuxtjs.cn/guide).
 
+### Plugins Files Introduction
+- i18n.js
+  - 預設只有`en`和`tw`，要新增其他語言請至`lang/`裡設置，記得`nuxt.config.js`也要修改
+- axios.js
+  - 封裝了`hooks`在`composables/useApis`裡組件內可以直接調用，範例請參照`pages/axios.vue`
+- remock.js
+  - 搭配了`$i18n`在切換語言時拿不同語言的資料
+
 
 ### Use Plugins
 - [@nuxt/i18n](https://i18n.nuxtjs.org/)
@@ -36,6 +44,6 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://ww
   ```
 - [remock.js](https://www.npmjs.com/package/remockjs)
 
-### 參考模板
+### Reference Template
 - [nuxt-i18n-example](https://github.com/paulgv/nuxt-i18n-example)
 - [nuxt-tailwind-darkmode](https://github.com/fayazara/nuxt-tailwind-darkmode)

@@ -81,9 +81,9 @@ export default {
     '@nuxtjs/axios',
     ['@nuxtjs/i18n',i18nConfig],
   ],
-  axios: {
-    proxy: true,
-  },
+  baseURL: `http://${process.env.HOST || "localhost"}:${
+    process.env.PORT || 3000
+  }`,
   proxy: {
     '/api/': {
       target: 'http://127.0.0.1:3000/api', // 目标服务器ip

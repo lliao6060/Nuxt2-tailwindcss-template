@@ -2,6 +2,7 @@
 import MenuList from './navbar/MenuList.vue'
 import LanguageChange from './navbar/LanguageChange.vue'
 import ThemeChange from './navbar/ThemeChange.vue'
+import { useAppStore } from '@/store/app'
 export default {
   name: 'Navbar',
   components: {
@@ -11,20 +12,20 @@ export default {
   },
   data() {
     return {
-      isMenuShow: false,
     };
   },
-  methods: {
-    toggleMenu() {
-      this.isMenuShow = !this.isMenuShow;
-    }
-  }
+  computed: {
+    appStore() {
+      return useAppStore()
+    },
+  },
 };
 </script>
 
 
 <template>
   <header class="
+    flex
     bg-red-500
     transition-all
     duration-300
@@ -36,7 +37,6 @@ export default {
     <nav class="
       w-11/12
       xl:w-4/5
-      h-full
       flex
       flex-wrap
       items-center
@@ -44,12 +44,12 @@ export default {
       mx-auto
     "
     >
-      <div>
+      <div @click="appStore.isMenuShow = false">
         <NuxtLink :to="localePath('index')">
           <div class="d-block">
             <img
               src="~/assets/images/maju.jpeg"
-              class="object-cover rounded-md w-[36px] w-xl-[45px]"
+              class="object-cover rounded-md w-[45px] w-xl-[50px]"
             >
           </div>
         </NuxtLink>
@@ -68,7 +68,7 @@ export default {
         <ThemeChange />
         <div
           class="xl:hidden md:flex-center"
-          @click="toggleMenu"
+          @click="appStore.toggleMenu()"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -88,17 +88,23 @@ export default {
       </div>
     </nav>
     <div
+      v-show="appStore.isMenuShow"
       class="
         absolute
-        w-25
+        w-full
+        top-[6.2vh]
         right-0
-        d-none
-        h-0 transition-all ease-out duration-500
+        h-0
+        transition-all
+        ease-out
+        duration-500
         z-10
       "
-      :class="{ 'd-block': isMenuShow }"
     >
-      <MenuList :show-menu="isMenuShow"/>
+      <MenuList
+        :show-menu="appStore.isMenuShow"
+        @onNavClicked="appStore.toggleMenu(false)"
+      />
     </div>
   </header>
 </template>

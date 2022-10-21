@@ -1,10 +1,31 @@
 <script setup>
-
+const props = defineProps({
+  itemNum: {
+    type: Number,
+    default: 1,
+  },
+})
 </script>
 
 <template>
   <div>
-    <div class="bg-white border border-gray-300 shadow rounded-md p-4 max-w-sm w-full mx-auto">
+    <div
+      v-for="(skeletonItem, i) in props.itemNum"
+      :key="`${skeletonItem}-${i}`"
+      class="
+        bg-white
+        border
+        border-gray-300
+        shadow
+        rounded-md
+        p-4
+        max-w-sm
+        w-full
+        mx-auto
+        dark:bg-slate-800
+        dark:border-gray-500
+      "
+    >
       <div class="animate-pulse flex space-x-4">
         <div class="rounded-full bg-slate-200 h-10 w-10"></div>
         <div class="flex-1 space-y-6 py-1">

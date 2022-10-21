@@ -1,5 +1,5 @@
 export default {
-  home: 'nuxt2-i18n-pinia-template',
+  home: 'Nuxt2-i18n-pinia-tailwindcss-template',
   aboutpage: {
     title: 'About us',
     subtitle: 'Hi from {0}',
@@ -13,6 +13,6 @@ export default {
     `,
   },
   apipage: {
-    title: 'axios Demo',
+    title: 'Axios Demo',
   },
 }

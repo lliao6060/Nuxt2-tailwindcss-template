@@ -1,5 +1,5 @@
 export default {
-  home: 'nuxt2-i18n-pinia-模板',
+  home: 'Nuxt2-i18n-pinia-tailwindcss-模板',
   aboutpage: {
     title: '關於我們',
     subtitle: 'Hi 從{0}',
@@ -8,6 +8,6 @@ export default {
     `,
   },
   apipage: {
-    title: 'axios 範例',
+    title: 'Axios 範例',
   },
 }

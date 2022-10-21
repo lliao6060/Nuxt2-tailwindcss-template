@@ -14,7 +14,8 @@
   ">
     <Navbar />
     <main class="
-      w-11/12
+      w-full
+      md:w-11/12
       xl:w-4/5
       mx-auto
       text-xl-lg

@@ -1,11 +1,21 @@
-<script>
-export default {
-  props: ['showMenu'],
-  name: 'MenuList',
-  data() {
-    return {};
+<script setup>
+const props = defineProps(['showMenu'])
+const emit = defineEmits(['onNavClicked'])
+
+const navList = [
+  {
+    name: 'about',
+    title: 'aboutpage.title',
   },
-};
+  {
+    name: 'axios',
+    title: 'apipage.title',
+  },
+]
+
+const onNavClick = () => {
+  emit('onNavClicked')
+}
 </script>
 
 <template>
@@ -20,11 +30,17 @@ export default {
       text-center
       dark:text-white
     "
-    :class="{ 'bg-red-300 dark:bg-gray-600': showMenu }"
+    :class="{ 'bg-red-300 dark:bg-gray-600': props.showMenu }"
   >
-    <li class="md:text-lg cursor-pointer">
+    <li
+      v-for="(navItem, i) in navList"
+      :key="`${navItem.name}-${i}`"
+      @click="onNavClick"
+      class="md:text-lg cursor-pointer"
+      :class="{ 'bg-red-400 dark:bg-gray-800': $route.name === `${navItem.name}___${$i18n.locale}` }"
+    >
       <nuxt-link
-        :to="localePath('about')"
+        :to="localePath(navItem.name)"
         class="
           md:p-4
           py-2
@@ -33,21 +49,7 @@ export default {
           cursor-pointer
         "
       >
-        {{ $t('aboutpage.title') }}
-      </nuxt-link>
-    </li>
-    <li class="md:text-lg cursor-pointer">
-      <nuxt-link
-        :to="localePath('axios')"
-        class="
-          md:p-4
-          py-2
-          block
-          hover:opacity-75
-          cursor-pointer
-        "
-      >
-        {{ $t('apipage.title') }}
+        {{ $t(navItem.title) }}
       </nuxt-link>
     </li>
   </ul>

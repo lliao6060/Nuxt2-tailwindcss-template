@@ -70,6 +70,7 @@ export default {
             <iconify-icon
               :icon="locale.flag"
               class="text-base"
+              style="font-size: 25px"
             />
           </span>
       </nuxt-link>
