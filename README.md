@@ -30,6 +30,10 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://ww
   - 搭配了`$i18n`在切換語言時拿不同語言的資料
 
 
+### Use UI
+- [tailwindcss](https://tailwindcss.com/)
+- [maju-ui](https://www.npmjs.com/package/maju-ui)
+
 ### Use Plugins
 - [@nuxt/i18n](https://i18n.nuxtjs.org/)
 - [@pinia/nuxt](https://www.npmjs.com/package/@pinia/nuxt)

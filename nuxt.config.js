@@ -15,6 +15,10 @@ const autoImportOpts = {
 export default {
   srcDir: 'src',
   mode: 'universal',
+  server: {
+    port: 3055, // default: 30
+    host: '0.0.0.0' // default: localhost
+  },
   head: {
     title: envConfig.env.TITLE,
     meta: [{
